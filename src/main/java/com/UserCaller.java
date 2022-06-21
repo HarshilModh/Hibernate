@@ -47,8 +47,9 @@ public class UserCaller {
 			Session session = sf.openSession();
 			
 			UserBean user = session.get(UserBean.class, userId);//search userid 
-			
+			//tx
 			session.delete(user);
+			//tx 
 			
 			session.close();
 	}
